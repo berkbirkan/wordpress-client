@@ -28,15 +28,15 @@ The `WordPressClient` class requires a WordPress site URL to initialize. It also
 ```python
 from wordpress_client import WordPressClient
 
-client = WordPressClient('https://example.com')
+client = WordPressClient('https://berkbirkan.com')
 ```
 
 ### Supported URL Formats
 
 The `WordPressClient` supports various URL formats:
-- `https://example.com`
-- `http://example.com`
-- `example.com` (defaults to HTTPS)
+- `https://criptoexperto.com`
+- `http://criptoexperto.com`
+- `criptoexperto.com` (defaults to HTTPS)
 
 ### Retrieving Recent Posts
 
@@ -107,7 +107,7 @@ Here is a simple example to demonstrate the usage:
 ```python
 from wordpress_client import WordPressClient
 
-client = WordPressClient('https://example.com')
+client = WordPressClient('https://criptoexperto.com')
 
 # Fetch recent posts
 recent_posts = client.get_recent_posts()
@@ -118,7 +118,7 @@ categories = client.get_categories()
 print(categories)
 
 # Fetch posts by category within a date range
-category_posts = client.get_posts_by_category(category_id=2, start_date='2022-01-01', end_date='2022-12-31')
+category_posts = client.get_posts_by_category(category_id=2, start_date='2024-01-01', end_date='2024-12-31')
 print(category_posts)
 
 # Fetch comments for a specific post
@@ -159,7 +159,7 @@ Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING.md) file f
 
 ## Contact
 
-For any inquiries or issues, please open an issue on [GitHub](https://github.com/yourusername/wordpress-client) or contact the maintainer directly.
+For any inquiries or issues, please open an issue on [GitHub](https://github.com/berkbirkan/wordpress-client) or contact the maintainer directly.
 
 ---
 
