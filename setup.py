@@ -4,6 +4,8 @@ setup(
     name='wordpress-client',
     version='0.1.0',
     description='A Python client for interacting with WordPress REST API',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     author='Berk Birkan',
     author_email='info@berkbirkan.com',
     url='https://github.com/berkbirkan/wordpress-client',
