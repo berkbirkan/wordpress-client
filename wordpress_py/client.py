@@ -26,9 +26,17 @@ class WordPressClient:
         return response.json()
 
     def get_posts_by_date_range(self, start_date, end_date, category_id=None):
-        url = f'{self.site_url}/wp-json/wp/v2/posts?after={start_date}&before={end_date}'
-        if category_id:
-            url += f'&categories={category_id}'
-        response = self.session.get(url)
-        response.raise_for_status()
-        return response.json()
+        try:
+            url = f'{self.site_url}/wp-json/wp/v2/posts?after={start_date}T00:00:00&before={end_date}T23:59:59'
+            if category_id:
+                url += f'&categories={category_id}'
+            response = self.session.get(url)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            print(f"Response: {response.text}")
+            return None
+
+
+

@@ -3,7 +3,7 @@ from wordpress_py.client import WordPressClient
 
 class TestWordPressClient(unittest.TestCase):
     def setUp(self):
-        self.client = WordPressClient('https://example.com')
+        self.client = WordPressClient('https://kelimelerbenim.com')
 
     def test_get_recent_posts(self):
         posts = self.client.get_recent_posts()
@@ -21,6 +21,7 @@ class TestWordPressClient(unittest.TestCase):
 
     def test_get_posts_by_date_range(self):
         posts = self.client.get_posts_by_date_range('2023-01-01', '2023-12-31')
+        print(posts)
         self.assertIsInstance(posts, list)
 
 if __name__ == '__main__':
