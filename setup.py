@@ -4,9 +4,9 @@ setup(
     name='wordpress-py',
     version='0.1.0',
     description='A Python client for interacting with WordPress REST API',
-    author='Your Name',
-    author_email='your.email@example.com',
-    url='https://github.com/yourusername/wordpress-py',
+    author='Berk Birkan',
+    author_email='info@berkbirkan.com',
+    url='https://github.com/berkbirkan/wordpress-py',
     packages=find_packages(),
     install_requires=[
         'requests',
