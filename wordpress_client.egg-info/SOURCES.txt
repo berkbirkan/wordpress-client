@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+tests/test_client.py
+wordpress_client.egg-info/PKG-INFO
+wordpress_client.egg-info/SOURCES.txt
+wordpress_client.egg-info/dependency_links.txt
+wordpress_client.egg-info/requires.txt
+wordpress_client.egg-info/top_level.txt
+wordpress_py/__init__.py
+wordpress_py/client.py
+wordpress_py/utils.py

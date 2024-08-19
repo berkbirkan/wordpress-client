@@ -20,9 +20,21 @@ class TestWordPressClient(unittest.TestCase):
         self.assertIsInstance(posts, list)
 
     def test_get_posts_by_date_range(self):
-        posts = self.client.get_posts_by_date_range('2023-01-01', '2023-12-31')
-        print(posts)
+        posts = self.client.get_posts_by_date_range('2010-01-01', '2024-12-31', category_id=1)
         self.assertIsInstance(posts, list)
+
+    def test_get_comments_by_post(self):
+        post_id = 7567  # Example post ID
+        comments = self.client.get_comments_by_post(post_id)
+        self.assertIsInstance(comments, list)
+        
+
+    def test_get_posts_by_author(self):
+        author_id = 1  # Example author ID
+        posts = self.client.get_posts_by_author(author_id)
+        self.assertIsInstance(posts, list)
+       
+
 
 if __name__ == '__main__':
     unittest.main()
