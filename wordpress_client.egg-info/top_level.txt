@@ -1,2 +1,2 @@
 tests
-wordpress_py
+wordpress_client
